@@ -1,62 +1,98 @@
-# JobTrackr – Job Application Tracker
+JobTrackr - Full-Stack Job Application Tracker
 
-A full-stack web app for managing job applications, built with:
-- React + Vite + Tailwind (Frontend)
-- Node.js + Express + MongoDB (Backend)
-- JWT Auth, Chart.js, Axios
+JobTrackr is a full-stack web application designed to help users manage and track their job applications efficiently. It includes features such as authentication, job CRUD operations, a dashboard with analytics, reminder email notifications, and clean UI/UX using Tailwind CSS.
 
----
+///////////////////////////////////////////////////
+Features
 
-## 🔐 Environment Variables
+1.User Authentication: Secure login and registration using JWT.
 
-### Backend (.env)
+2.Job Management: Add, edit, delete, and view job applications.
 
-```
+3.Dashboard: Visual analytics and recent activity log.
+
+4.Reminders: Send custom email reminders about upcoming job deadlines.
+
+5.Responsive UI: Built with Tailwind CSS for clean, responsive design.
+
+6.Testing: Frontend and backend tests using Vitest and Jest.
+///////////////////////////////////////////////////
+Tech Stack
+
+Frontend:
+
+.React
+
+.React Router
+
+.Tailwind CSS
+
+.Axios
+
+.Vitest + React Testing Library
+
+Backend:
+
+.Node.js + Express
+
+.MongoDB + Mongoose
+
+.JWT for authentication
+
+.Nodemailer for email reminders( advanced functionality )
+
+.Jest + Supertest for backend testing
+///////////////////////////////////////////////////
+
+Installation
+1. Clone the repository
+   git clone https://github.com/Sukh0004 jobtrackr-project.git
+   
+//////////////////////////////////////////////////////////////////////   
+
+
+Set up environment variable
 PORT=4000
-MONGO_URI=your_mongodb_atlas_uri
-JWT_SECRET=your_secret_key
-```
+MONGO_URI=mongodb+srv://jobtrackrUser:nOor2004@cluster0.cupsha1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+JWT_SECRET=0987654321poiuytrewq
+EMAIL_USER=noorkainth222@gmail.com
+EMAIL_PASS=ioyflgpxxzignxms
+///////////////////////////////////////////////////////////////////////
 
-### Frontend (.env for Vercel if needed)
+Running the app
+Backend:
+cd backend
+npm run dev
 
-If using Vercel, set `VITE_API_URL=https://your-backend-render-url.onrender.com/api` in project settings.
+Frontend:
+cd frontend
+npm run dev
 
----
+Testing:
+cd backend
+npm test
 
-## 🚀 Deployment Instructions
+cd frontend
+npx vitest run
+///////////////////////////////////////////////////////////////////////
 
-### 🖥 Backend (Render)
+Deployement:
+Frontend on vercel
+backend on Render
+///////////////////////////////////////////////////////////////////////
 
-1. Push `/backend` to a GitHub repo.
-2. Go to https://render.com and click "New Web Service".
-3. Connect to your GitHub repo.
-4. Set:
-   - **Build Command**: `npm install`
-   - **Start Command**: `node server.js`
-   - **Environment**:
-     - `NODE_VERSION=18`
-     - `PORT=4000`
-     - `MONGO_URI`
-     - `JWT_SECRET`
+Future Improvements:
+User profile and avatar support
 
----
+Save job filters and preferences
 
-### 🌐 Frontend (Vercel)
+More refined analytics (e.g., time to get hired)
+./././././././././/././././././././././././/././/./././././././././././
 
-1. Push `/frontend` to another GitHub repo.
-2. Go to https://vercel.com and import the repo.
-3. Set:
-   - **Framework**: Vite
-   - **Environment Variable**:
-     - `VITE_API_URL=https://your-backend-url.onrender.com/api`
 
----
+Developed by:
+Sukhpreet Singh
+GitHub: @Sukh0004
 
-## 🧪 Testing (Optional)
 
-- Frontend: `Vitest`
-- Backend: `Jest`
 
----
-
-✅ Project Complete! Visit `/login`, `/register`, and track your jobs via dashboard.
