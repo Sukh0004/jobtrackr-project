@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 import { jwtDecode } from 'jwt-decode';
 
 // Create context
-const AuthContext = createContext();
+const AuthContext = createContext();// working ok
 
 // Provide context to children
 export const AuthProvider = ({ children }) => {
@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
     return token ? jwtDecode(token) : null;
   });
 
-  const token = localStorage.getItem('token'); // ✅ Define it here
+  const token = localStorage.getItem('token'); // 
 
   const login = (token) => {
     localStorage.setItem('token', token);

@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
     });
     res.json({ message: 'Reminder email sent!' });
   } catch (err) {
-     console.error('❌ Email send error:', err);
+     console.error(' Email send error:', err);
     res.status(500).json({ error: 'Failed to send email' });
   }
 });

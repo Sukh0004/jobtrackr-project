@@ -5,7 +5,7 @@ import User from '../models/User.js';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 
-dotenv.config({ path: '.env.test' }); // make sure you have this if using a test .env
+dotenv.config({ path: '.env.test' });
 
 let token;
 

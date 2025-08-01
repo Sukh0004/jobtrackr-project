@@ -20,42 +20,19 @@ export const register = async (req, res) => {
 };
 
 export const login = async (req, res) => {
+  
+  const { email, password } = req.body;
   try {
-    console.log('🔐 Login attempt:', email, password);
-
+    
     const user = await User.findOne({ email });
-    console.log('🔎 User found:', user);
-
     if (!user) return res.status(404).json({ message: 'User not found' });
 
     const isMatch = await bcrypt.compare(password, user.password);
-    console.log('✅ Password match:', isMatch);
-
     if (!isMatch) return res.status(401).json({ message: 'Invalid credentials' });
 
     const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '1d' });
-    console.log('🪙 JWT token created:', token);
-
-    res.status(200).json({
-      token,
-      user: { id: user._id, username: user.username, email: user.email }
-    });
+    res.status(200).json({ token, user: { id: user._id, username: user.username, email: user.email } });
   } catch (err) {
-    console.error('❌ Login failed:', err);
     res.status(500).json({ message: 'Login failed', error: err.message });
   }
-  // const { email, password } = req.body;
-  // try {
-    
-  //   const user = await User.findOne({ email });
-  //   if (!user) return res.status(404).json({ message: 'User not found' });
-
-  //   const isMatch = await bcrypt.compare(password, user.password);
-  //   if (!isMatch) return res.status(401).json({ message: 'Invalid credentials' });
-
-  //   const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '1d' });
-  //   res.status(200).json({ token, user: { id: user._id, username: user.username, email: user.email } });
-  // } catch (err) {
-  //   res.status(500).json({ message: 'Login failed', error: err.message });
-  // }
 };

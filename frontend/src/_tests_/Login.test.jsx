@@ -12,7 +12,7 @@ test('renders login form', () => {
     </AuthProvider>
   );
 
-  // ✅ Updated to look for placeholders, not labels
+  //  Updated to look for placeholders, not labels
   expect(screen.getByPlaceholderText(/email/i)).toBeInTheDocument();
   expect(screen.getByPlaceholderText(/password/i)).toBeInTheDocument();
   expect(screen.getByRole('button', { name: /login/i })).toBeInTheDocument();
