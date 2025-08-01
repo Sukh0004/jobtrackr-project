@@ -86,8 +86,8 @@ DELETE       /api/jobs/:id          Delete job entry
 POST         /api/reminders         Send reminder email
 
 Deployement:
-Frontend on vercel
-backend on Render
+Frontend on vercel   https://jobtrackr-project-eozk.vercel.app
+backend on Render    https://jobtrackr-backend-final.onrender.com
 ///////////////////////////////////////////////////////////////////////
 
 Future Improvements:
