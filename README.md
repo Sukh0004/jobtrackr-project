@@ -98,6 +98,9 @@ Save job filters and preferences
 More refined analytics (e.g., time to get hired)
 ./././././././././/././././././././././././/././/./././././././././././
 
+Acknowledgements
+Thanks to Langara College  and Adnan Reza for guidance and support,
+visuals from Tailwind UI.
 
 Developed by:
 Sukhpreet Singh
