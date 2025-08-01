@@ -75,6 +75,15 @@ npm test
 cd frontend
 npx vitest run
 ///////////////////////////////////////////////////////////////////////
+API Routes:
+Method        Endpoint              description
+POST         /api/auth/register     Register new user
+POST         /api/auth/login        Login and get token
+GET          /api/jobs              Fetch all user jobs
+POST         /api/jobs              Create new job entry
+PUT          /api/jobs/:id          Update job entry
+DELETE       /api/jobs/:id          Delete job entry
+POST         /api/reminders         Send reminder email
 
 Deployement:
 Frontend on vercel
