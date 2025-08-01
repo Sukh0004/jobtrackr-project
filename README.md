@@ -46,7 +46,7 @@ Backend:
 
 Installation
 1. Clone the repository
-   git clone https://github.com/Sukh0004 jobtrackr-project.git
+   git clone https://github.com/Sukh0004/jobtrackr-project.git
    
 //////////////////////////////////////////////////////////////////////   
 
